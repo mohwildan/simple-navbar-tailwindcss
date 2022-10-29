@@ -1,4 +1,4 @@
-import "./global.css";
+import "./style/global.css";
 import NavBar from "../components/NavBar";
 
 export default function RootLayout({
@@ -16,9 +16,7 @@ export default function RootLayout({
         <div>
           <NavBar />
         </div>
-        <div className="flex h-screen justify-center items-center">
-          {children}
-        </div>
+        <div className="max-w-screen-lg mx-auto mt-20 px-4 ">{children}</div>
       </body>
     </html>
   );
