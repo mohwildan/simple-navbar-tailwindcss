@@ -18,6 +18,12 @@ const nav = [
 const NavBar: React.FC = () => {
   const [isActive, setIsActive] = useState(false);
 
+  useEffect(() => {
+    window.addEventListener(
+      "resize",
+      () => window.innerWidth >= 768 && setIsActive(false)
+    );
+  }, []);
   return (
     <>
       <header
