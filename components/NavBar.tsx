@@ -2,6 +2,7 @@
 import Link from "next/link";
 import clsx from "clsx";
 import { useEffect, useState } from "react";
+import { ButtonVariant } from "./UI/ButtonVarians";
 
 const nav = [
   {
@@ -60,9 +61,9 @@ const NavBar: React.FC = () => {
             </ul>
           </div>
           <div>
-            <button className="bg-blue-500 text-white rounded-md hover:bg-blue-700 transition-all duration-300  md:block hidden py-2 px-4">
+            <ButtonVariant className="hidden md:block">
               Pro Version
-            </button>
+            </ButtonVariant>
           </div>
           <div
             className="md:hidden cursor-pointer "
@@ -99,9 +100,7 @@ const NavBar: React.FC = () => {
                 <li>{items.title}</li>
               </Link>
             ))}
-            <button className="bg-blue-500 text-white rounded-md hover:bg-blue-700 transition-all duration-300 py-2 px-4">
-              Pro Version
-            </button>
+            <ButtonVariant>Pro Version</ButtonVariant>
           </ul>
         </div>
       </header>
