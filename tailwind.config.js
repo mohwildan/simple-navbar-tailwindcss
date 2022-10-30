@@ -6,6 +6,10 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      transitionTimingFunction: {
+        "in-expo": "cubic-bezier(.5,-.75,.7,2)",
+      },
+    },
   },
 };
